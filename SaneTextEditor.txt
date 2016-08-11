@@ -1,3 +1,16 @@
+;
+; Created by IntelliJ IDEA.
+; User: Glenn Drescher aka. @Saneroki
+; Date: 11/08/2016
+; Time: 22:10
+;
+
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United
+; States and/or other countries. All rights reserved.
+; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
 ## Title: Sane Text Editor
 ## Description: Adds buttons to make it easy to create colored Text, add pictures and easy links of items in text editors like the Guild Message of the day, the Guild About Us, the Guild Note Editor and when writing new mail.
 ## Version: 0.1
