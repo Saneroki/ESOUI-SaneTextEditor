@@ -1,0 +1,51 @@
+<GuiXml>
+	<Controls >
+
+
+		<TopLevelControl name="VirtualButtonFrame" virtual="true" >
+			<Dimensions x="300" y="32" />
+			<Anchor point="RIGHT" relativeTo="ZO_GuildHomeInfoMotDSave" relativePoint="LEFT" />
+<!--			
+			<Controls>
+				<Backdrop inherits="ZO_DefaultBackdrop">
+				</Backdrop>
+			</Controls>
+-->
+		</TopLevelControl>
+
+		<Control name="VirtualColorButton" virtual="true" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="LEFT" />
+
+			<Controls>
+
+				<Button name="$(parent)Button" mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER"/>            
+					<OnMouseEnter>
+                		SaneTextEditor.ShowTooltip(self)
+		            </OnMouseEnter>
+		            <OnMouseExit>
+                		SaneTextEditor.HideTooltip(self)
+            		</OnMouseExit>
+					<OnMouseUp>
+						if (button == MOUSE_BUTTON_INDEX_LEFT) then
+							SaneTextEditor.InsertColorToEditbox(self)
+						elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+							SaneTextEditor.ShowColorPicker(self)
+						elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+							SaneTextEditor.ResetDefaultColor(self)
+						end
+					</OnMouseUp>
+					<Controls>
+						<Texture name="$(parent)Normaltexture" textureFile="EsoUI/Art/Guild/tabIcon_history_up.dds" >
+							<Dimensions x="32" y="32" />
+							<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+						</Texture>
+					</Controls>
+				</Button>
+			</Controls>
+		</Control>
+
+	</Controls>
+</GuiXml>
