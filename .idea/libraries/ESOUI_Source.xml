@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ESOUI-Source" type="Lua">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../ESOUI-Source" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
