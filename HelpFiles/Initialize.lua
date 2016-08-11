@@ -1,17 +1,16 @@
 --
 -- Created by IntelliJ IDEA.
--- User: Glenn
+-- User: Glenn Drescher aka. @Saneroki
 -- Date: 11/08/2016
 -- Time: 22:10
--- To change this template use File | Settings | File Templates.
 --
 
 ----------------------------------------------------------------------------------
 --  Initialize Variables --
 ----------------------------------------------------------------------------------
 
---local STE = {}
-SaneTextEditor = STE or {}
+local STE = {}
+SaneTextEditor = STE
 
 STE.name = "SaneTextEditor"
 STE.version = 1
@@ -40,7 +39,7 @@ local defaultButtonFrames = {
 
 local buttonFrames = {}
 local colorControls = {}
-local currentColorButton = nil
+local currentColorButton
 
 ----------------------------------------------------------------------------------
 -- PictureButton Functions  --
@@ -57,7 +56,7 @@ local currentColorButton = nil
 ----------------------------------------------------------------------------------
 function STE.InsertColorToEditbox(control)
     local buttonNumber = tonumber(control:GetParent():GetName())
-    local editbox = nil
+    local editbox
     if control:GetParent():GetParent():GetName() == "MotdButtonFrame" then
         editbox = ZO_GuildHomeInfoMotDSavingEdit
     end
@@ -100,8 +99,9 @@ end
 ----------------------------------------------------------------------------------
 function STE.CreateColorButtons(parent)
     local name = "Color"
+    local lastControl
     for i=1, STE.amountOfColorButtons, 1 do
-        table.insert(colorControls,  GetWindowManager():CreateControlFromVirtual(i, parent, "VirtualColorButton"))
+        table.insert(colorControls,  GetWindowManager():CreateControlFromVirtual(name .. i, parent, "VirtualColorButton"))
         colorControls[i]:GetChild():GetChild():SetColor(ZO_ColorDef:New(STE.savedVariables[i]):UnpackRGBA())
         if i > 1 then
             colorControls[i]:ClearAnchors()
@@ -146,9 +146,9 @@ end
 -- Loads the AddOn
 function STE:Initialize()
     STE.savedVariables = ZO_SavedVars:NewAccountWide("STEVars", STE.version, "savedColors", STE.defaultColors)
-    STE.CreateButtonFrames()
+    --STE.CreateButtonFrames()
     --STE.MotdFrame = GetWindowManager():CreateControlFromVirtual("MotdFrame", ZO_GuildHomeInfoMotDSave, "VirtualButtonFrame")
-    --STE.CreateColorButtons(STE.MotdFrame)
+    STE.CreateColorButtons(STE.MotdFrame)
 
     -- Unregister Event
     EVENT_MANAGER:UnregisterForEvent(STE.name, EVENT_ADD_ON_LOADED, STE.OnAddOnLoaded)

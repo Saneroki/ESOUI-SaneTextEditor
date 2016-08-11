@@ -1,0 +1,27 @@
+--------------------------------------------------------
+-- Things that should be done --
+--------------------------------------------------------
+
+-- for Version 1 --
+TODO: Recreate the Addon
+
+BUG: Make it Color Buttons working
+BUG: Create dynamically Window frames and Buttons
+TODO: Clean everything up
+ADD: Release?
+ADD: Animations?
+
+
+-- for Version 2 --
+TODO: Character Counter
+TODO: Enlarge Edit Box
+TODO: Undo and Redo
+
+
+-- for Version 3 --
+TODO: Item linking
+ADD: Short or functional link
+
+
+-- for Version 4 --
+TODO: Picture linking
