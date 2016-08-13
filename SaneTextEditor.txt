@@ -20,4 +20,4 @@
 
 resources/Startup.lua
 resources/SavingVars.lua
-resources/Layout.xml
+resources/Startup-uiTemplates.xml
