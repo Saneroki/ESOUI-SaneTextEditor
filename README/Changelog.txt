@@ -3,25 +3,29 @@
 --------------------------------------------------------
 
 -- for Version 1 --
-TODO: Recreate the Addon
+-- Done -- TODO: Recreate the Addon
 
-BUG: Make it Color Buttons working
-BUG: Create dynamically Window frames and Buttons
-TODO: Clean everything up
-ADD: Release?
-ADD: Animations?
-
-
--- for Version 2 --
-TODO: Character Counter
-TODO: Enlarge Edit Box
-TODO: Undo and Redo
+-- Done -- BUG: Make it Color Buttons working
+-- Done -- BUG: Create dynamically Window frames and Buttons
+-- Done -- TODO: Clean everything up
+-- Not before version 4 -- ADD: Release?
+-- Done -- TODO: Settings Mechanics
+-- Done -- TODO: Settings: Short Insert Text
+-- Done -- ADD: Animations?
 
 
+
+Work estimation: Huge
 -- for Version 3 --
 TODO: Item linking
 ADD: Short or functional link
 
-
+Work estimation: Medium
 -- for Version 4 --
 TODO: Picture linking
+
+Work estimation: Little, Undo Redo can be a problem
+-- for Version 2 --
+TODO: Character Counter
+TODO: Enlarge Edit Box
+TODO: Undo and Redo -- Can be dropped if API does not support it

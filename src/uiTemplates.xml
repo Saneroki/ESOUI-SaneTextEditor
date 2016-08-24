@@ -1,0 +1,176 @@
+<GuiXml>
+	<Animations>
+		<AnimationTimeline name="ButtonScale">
+			<Animations>
+				<ScaleAnimation duration="200" endScale="2" startScale="1" EasingFunction="ZO_EaseInOutCubic" />
+			</Animations>
+		</AnimationTimeline>
+	</Animations>
+
+	<Controls >
+
+		<TopLevelControl name="VirtualButtonFrame" mouseEnabled="true" virtual="true" >
+			<Dimensions x="320" y="32" />
+			<Anchor point="RIGHT" relativeTo="ZO_GuildHomeInfoMotDSave" relativePoint="LEFT" />
+<!--
+			<Controls>
+				<Backdrop name="$(parent)Backdrop" inherits="ZO_DefaultBackdrop">
+					<Dimensions x="300" y="32">
+					</Dimensions>
+				</Backdrop>
+			</Controls>
+-->
+		</TopLevelControl>
+
+		<Label name="VirtualLabel" virtual="true" >
+			<Dimensions x="320" y="32" />
+			<Anchor point="TOP" relativeTo="ZO_GuildHomeInfoMotDSave" relativePoint="BOTTOM" />
+		</Label>
+
+		<Button name="VirtualColorButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="LEFT" />
+			<OnMouseEnter>
+				STE.ShowTooltipForColorButton(self)
+				STE.ButtonSizeUp(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				STE.HideTooltip(self)
+				STE.ButtonSizeDown(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					STE.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					STE.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					STE.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+				<Controls>
+					<Texture name="$(parent)Normaltexture" textureFile="EsoUI/Art/Guild/tabIcon_history_up.dds" excludeFromResizeToFitExtents="true" >
+						<Dimensions x="32" y="32" />
+						<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+					</Texture>
+				</Controls>
+		</Button>
+
+		<Button name="VirtualItemButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				STE.ShowTooltipForItemButton(self)
+				STE.ButtonSizeUp(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				STE.HideTooltip(self)
+				STE.ButtonSizeDown(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					STE.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					STE.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					STE.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="EsoUI/Art/MainMenu/menuBar_inventory_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+		<Button name="VirtualPictureButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				STE.ShowTooltipForPictureButton(self)
+				STE.ButtonSizeUp(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				STE.HideTooltip(self)
+				STE.ButtonSizeDown(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					STE.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					STE.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					STE.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="EsoUI/Art/MainMenu/menuBar_journal_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+		<Button name="VirtualUndoButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				STE.ShowTooltipForUndoButton(self)
+				STE.ButtonSizeUp(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				STE.HideTooltip(self)
+				STE.ButtonSizeDown(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					STE.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					STE.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					STE.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="esoui/art/charactercreate/rotate_left_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+		<Button name="VirtualRedoButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				STE.ShowTooltipForRedoButton(self)
+				STE.ButtonSizeUp(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				STE.HideTooltip(self)
+				STE.ButtonSizeDown(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					STE.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					STE.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					STE.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="esoui/art/charactercreate/rotate_right_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+	</Controls>
+</GuiXml>
