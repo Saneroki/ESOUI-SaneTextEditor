@@ -1,0 +1,153 @@
+<GuiXml>
+	<Controls >
+
+		<TopLevelControl name="VirtualButtonFrame" mouseEnabled="true" virtual="true" >
+			<Dimensions x="300" y="32" />
+			<Anchor point="RIGHT" relativeTo="ZO_GuildHomeInfoMotDSave" relativePoint="LEFT" />
+<!--
+			<Controls>
+				<Backdrop name="$(parent)Backdrop" inherits="ZO_DefaultBackdrop">
+					<Dimensions x="300" y="32">
+					</Dimensions>
+				</Backdrop>
+			</Controls>
+-->
+		</TopLevelControl>
+
+		<Button name="VirtualColorButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="LEFT" />
+			<OnMouseEnter>
+				SaneTextEditor.ShowTooltipForColorButton(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				SaneTextEditor.HideTooltip(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					SaneTextEditor.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					SaneTextEditor.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					SaneTextEditor.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+				<Controls>
+					<Texture name="$(parent)Normaltexture" textureFile="EsoUI/Art/Guild/tabIcon_history_up.dds" >
+						<Dimensions x="32" y="32" />
+						<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+					</Texture>
+				</Controls>
+		</Button>
+
+		<Button name="VirtualItemButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				SaneTextEditor.ShowTooltipForItemButton(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				SaneTextEditor.HideTooltip(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					SaneTextEditor.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					SaneTextEditor.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					SaneTextEditor.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="EsoUI/Art/MainMenu/menuBar_inventory_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+		<Button name="VirtualPictureButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				SaneTextEditor.ShowTooltipForItemButton(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				SaneTextEditor.HideTooltip(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					SaneTextEditor.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					SaneTextEditor.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					SaneTextEditor.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="EsoUI/Art/MainMenu/menuBar_journal_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+		<Button name="VirtualUndoButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				SaneTextEditor.ShowTooltipForItemButton(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				SaneTextEditor.HideTooltip(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					SaneTextEditor.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					SaneTextEditor.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					SaneTextEditor.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="esoui/art/charactercreate/rotate_left_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+		<Button name="VirtualRedoButton" excludeFromResizeToFitExtents="true" virtual="true"
+				mouseEnabled="true" inherits="ZO_ButtonBehaviorClickSound" >
+			<Dimensions x="32" y="32" />
+			<Anchor point="LEFT" relativeTo="$(parent)" relativePoint="Right" />
+			<OnMouseEnter>
+				SaneTextEditor.ShowTooltipForItemButton(self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				SaneTextEditor.HideTooltip(self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if (button == MOUSE_BUTTON_INDEX_LEFT) then
+					SaneTextEditor.InsertColorToEditbox(self)
+				elseif (button == MOUSE_BUTTON_INDEX_RIGHT) then
+					SaneTextEditor.ShowColorPicker(self)
+				elseif (button == MOUSE_BUTTON_INDEX_MIDDLE) then
+					SaneTextEditor.ResetDefaultColor(self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Texture name="$(parent)Normaltexture" textureFile="esoui/art/charactercreate/rotate_right_up.dds" >
+					<Dimensions x="32" y="32" />
+					<Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" />
+				</Texture>
+			</Controls>
+		</Button>
+
+	</Controls>
+</GuiXml>
